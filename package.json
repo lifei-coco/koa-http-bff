@@ -7,11 +7,11 @@
     "start": "nodemon src/app.js",
     "postinstall": "husky install",
     "lint": "eslint --ext .js",
-    "lint-staged": "echo 123"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "**/*.{js}": "npm run lint",
-    "**/*.{js,md}": [
+    "**/*.js": [
+      "npm run lint",
       "prettier --write"
     ]
   },
