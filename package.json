@@ -1,0 +1,45 @@
+{
+  "name": "koa-http-bff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "postinstall": "husky install",
+    "lint": "eslint --ext .js",
+    "lint-staged": "echo 123"
+  },
+  "lint-staged": {
+    "**/*.{js}": "npm run lint",
+    "**/*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lifei-coco/koa-http-bff.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lifei-coco/koa-http-bff/issues"
+  },
+  "homepage": "https://github.com/lifei-coco/koa-http-bff#readme",
+  "dependencies": {
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0",
+    "log4js": "^6.9.1",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  }
+}
